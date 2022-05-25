@@ -1,0 +1,89 @@
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-type: application/json;
+
+{
+  "username": "kek",
+  "password": "123456asdfgh"
+}
+###
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-type: application/json;
+
+{
+  "username": "solar-ka",
+  "password": "am9iedee"
+}
+###
+POST http://127.0.0.1:8000/api/v1/posts/
+Content-type: application/json;
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTU3MTI2LCJqdGkiOiI4ZDc4ZWUxZGVmNTU0Y2I0OWQ0NzE0MzczMjI3NmVjNSIsInVzZXJfaWQiOjJ9.j0cEiLn4-_Ov4IJQvmaxlypZoPQ8r86gjrXQZ0PwZTU
+
+{
+"text": "string"
+}
+###
+GET http://127.0.0.1:8000/api/v1/posts/?limit=2&offset=4 
+###
+GET http://127.0.0.1:8000/api/v1/posts/
+###
+PUT http://127.0.0.1:8000/api/v1/posts/1/
+Content-type: application/json;
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTU3MTI2LCJqdGkiOiI4ZDc4ZWUxZGVmNTU0Y2I0OWQ0NzE0MzczMjI3NmVjNSIsInVzZXJfaWQiOjJ9.j0cEiLn4-_Ov4IJQvmaxlypZoPQ8r86gjrXQZ0PwZTU
+
+{
+"text": "string-1"
+}
+###
+GET http://127.0.0.1:8000/api/v1/posts/1/comments/1
+###
+POST http://127.0.0.1:8000/api/v1/posts/1/comments/
+Content-type: application/json;
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTU3MTI2LCJqdGkiOiI4ZDc4ZWUxZGVmNTU0Y2I0OWQ0NzE0MzczMjI3NmVjNSIsInVzZXJfaWQiOjJ9.j0cEiLn4-_Ov4IJQvmaxlypZoPQ8r86gjrXQZ0PwZTU
+
+{
+"text": "com-1"
+}
+
+###
+PATCH http://127.0.0.1:8000/api/v1/posts/1/comments/1/
+Content-type: application/json;
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTU3MTI2LCJqdGkiOiI4ZDc4ZWUxZGVmNTU0Y2I0OWQ0NzE0MzczMjI3NmVjNSIsInVzZXJfaWQiOjJ9.j0cEiLn4-_Ov4IJQvmaxlypZoPQ8r86gjrXQZ0PwZTU
+
+{
+"text": "com-1"
+}
+###
+GET http://127.0.0.1:8000/api/v1/groups/1
+###
+GET http://127.0.0.1:8000/api/v1/follow/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTY1NTYxLCJqdGkiOiI5ZTVlNDAxOTcxNjI0MTRiYmYxMTc4MmJhNzYxMDk4MyIsInVzZXJfaWQiOjF9.lGyjpeC2WG1wQ6XHCxKZpRNfD3lXebD0iQ9N_DHQKxs
+###
+GET http://127.0.0.1:8000/api/v1/follow/?search=lo
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTU3MTI2LCJqdGkiOiI4ZDc4ZWUxZGVmNTU0Y2I0OWQ0NzE0MzczMjI3NmVjNSIsInVzZXJfaWQiOjJ9.j0cEiLn4-_Ov4IJQvmaxlypZoPQ8r86gjrXQZ0PwZTU
+###
+POST http://127.0.0.1:8000/api/v1/follow/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTY1NTYxLCJqdGkiOiI5ZTVlNDAxOTcxNjI0MTRiYmYxMTc4MmJhNzYxMDk4MyIsInVzZXJfaWQiOjF9.lGyjpeC2WG1wQ6XHCxKZpRNfD3lXebD0iQ9N_DHQKxs
+Content-type: application/json;
+
+{
+"following": "lol"
+}
+###
+POST http://127.0.0.1:8000/api/v1/jwt/verify/
+Content-type: application/json;
+
+{
+"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTU3MTI2LCJqdGkiOiI4ZDc4ZWUxZGVmNTU0Y2I0OWQ0NzE0MzczMjI3NmVjNSIsInVzZXJfaWQiOjJ9.j0cEiLn4-_Ov4IJQvmaxlypZoPQ8r86gjrXQZ0PwZTU"
+}
+###
+GET http://127.0.0.1:8000/api/v1/groups/
+###
+POST http://127.0.0.1:8000/api/v1/groups/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUzNTY1NTYxLCJqdGkiOiI5ZTVlNDAxOTcxNjI0MTRiYmYxMTc4MmJhNzYxMDk4MyIsInVzZXJfaWQiOjF9.lGyjpeC2WG1wQ6XHCxKZpRNfD3lXebD0iQ9N_DHQKxs
+Content-type: application/json;
+
+{
+"title": "lol",
+"slug": "kek",
+"description": "arbidol"
+}
