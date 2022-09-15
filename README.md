@@ -83,4 +83,4 @@ Authorization: Bearer {token}
 ```
 
 ## Автор проекта ༼ つ ◕_◕ ༽つ
-[Карина Солнцева](https://vk.com/shapendus) 
+[<img height="32" width="32" src="https://simpleicons.org/icons/telegram.svg" />](https://t.me/solar_ka) Карина Солнцева 
